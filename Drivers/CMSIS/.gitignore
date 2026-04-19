@@ -1,0 +1,45 @@
+# 忽略所有
+*
+!.gitignore
+
+# 首先保留 Device 目录本身（必须步骤）
+!Device/
+!Include/
+
+# 然后保留 ST 目录
+!Device/ST/
+
+# 再保留 STM32F4xx 目录
+!Device/ST/STM32F4xx/
+
+# 现在可以保留 Include 目录下的特定头文件
+!Device/ST/STM32F4xx/Include/
+!Device/ST/STM32F4xx/Include/stm32f4xx.h
+!Device/ST/STM32F4xx/Include/stm32f407xx.h
+!Device/ST/STM32F4xx/Include/system_stm32f4xx.h
+
+# 保留 Source/Templates 目录
+!Device/ST/STM32F4xx/Source/
+!Device/ST/STM32F4xx/Source/Templates/
+
+# 保留特定源文件
+!Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
+
+# 保留 arm 子目录及特定文件
+!Device/ST/STM32F4xx/Source/Templates/arm/
+!Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.s
+
+# 保留 gcc 子目录及特定文件
+!Device/ST/STM32F4xx/Source/Templates/gcc/
+!Device/ST/STM32F4xx/Source/Templates/gcc/startup_stm32f407xx.s
+
+#  iar 目录
+# !Device/ST/STM32F4xx/Source/Templates/iar/
+
+# 保留 core_cm4.h 文件
+!Include/core_cm4.h
+
+# 保留所有头文件，避免后续其他工程出问题
+!Include/*.h
+
+
